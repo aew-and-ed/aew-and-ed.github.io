@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aew &amp; Ed's Wedding</title>
+<meta name="description" content="Wedding details for Apirat and Edwin: RSVP form, venue, timings, and travel info.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #f5f7f4;
+    --ink: #1f2f2b;
+    --muted: #5d6c67;
+    --accent: #3e6b5f;
+    --line: #d5ddd9;
+    --serif: "Comfortaa", system-ui, sans-serif;
+    --sans: "Comfortaa", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 300 1.0625rem/1.7 var(--sans);
+  }
+  a { color: var(--accent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  /* Hero */
+  .hero {
+    min-height: 20vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    padding: 4rem 1.5rem 2rem;
+  }
+  .hero h1 {
+    font: 400 clamp(3.2rem, 11vw, 7rem)/1 var(--serif);
+    letter-spacing: 0.01em;
+    margin: 0;
+  }
+  .hero .amp { font-style: italic; color: var(--accent); padding: 0 0.15em; }
+  .hero p { margin: 1.5rem 0 0; font-size: 1.2rem; color: var(--muted); }
+
+  /* Nav */
+  nav {
+    position: sticky; top: 0; z-index: 5;
+    display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;
+    padding: 0.9rem 1rem;
+    background: rgba(245, 247, 244, 0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav a { color: var(--ink); text-decoration: none; font-weight: 400; }
+  nav a:hover { color: var(--accent); }
+
+  /* Sections */
+  main { max-width: 42rem; margin: 0 auto; padding: 0 1.5rem 5rem; }
+  section { padding: 4.5rem 0 0; scroll-margin-top: 3rem; }
+  h2 { font: 500 2.4rem/1.15 var(--serif); margin: 0 0 1.25rem; }
+  h3 { font: 500 1.05rem/1.4 var(--sans); margin: 1.75rem 0 0.25rem; }
+  p { margin: 0 0 1rem; }
+  address { font-style: normal; }
+
+  /* Timings */
+  .timeline { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .timeline li {
+    display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem;
+    padding: 0.9rem 0; border-bottom: 1px solid var(--line);
+  }
+  .timeline time { font-family: var(--serif); font-size: 1.35rem; color: var(--accent); }
+
+  /* RSVP form */
+  form { display: grid; gap: 1.25rem; }
+  label, legend { font-weight: 400; display: block; margin-bottom: 0.3rem; }
+  input[type="text"], input[type="email"], input[type="number"], textarea, select {
+    width: 100%; padding: 0.7rem 0.8rem;
+    font: inherit; color: var(--ink);
+    background: #fff; border: 1px solid var(--line); border-radius: 4px;
+  }
+  textarea { min-height: 6rem; resize: vertical; }
+  fieldset { border: 0; padding: 0; margin: 0; }
+  .choices { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .choices label { display: flex; align-items: center; gap: 0.5rem; font-weight: 300; margin: 0; }
+  button {
+    justify-self: start;
+    font: 400 1rem var(--sans);
+    padding: 0.8rem 2rem;
+    color: #fff; background: var(--accent);
+    border: 0; border-radius: 4px; cursor: pointer;
+  }
+  button:hover { background: #2f574c; }
+  .note { color: var(--muted); font-size: 0.95rem; }
+
+  footer { text-align: center; color: var(--muted); padding: 2rem 1rem 3rem; border-top: 1px solid var(--line); }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<!-- ============ HOW TO EDIT ============
+  Change any text between the tags. Look for the words in CAPITALS in
+  comments to find the bits you'll probably want to update.
+  ==================================== -->
+
+<header class="hero">
+  <!-- NAMES -->
+  <h1>Apirat <span class="amp">&amp;</span> Edwin</h1>
+  <!-- DATE AND PLACE -->
+  <p>2pm Saturday 15th May 2027<br>The West Barn, Bradford-on-Avon</p>
+</header>
+
+<nav aria-label="Sections">
+  <a href="#rsvp">RSVP</a>
+  <a href="#venue">Venue</a>
+  <a href="#timings">Timings</a>
+  <!--<a href="#travel">Travel</a>-->
+</nav>
+
+<main>
+
+  <section id="rsvp">
+    <h2>RSVP</h2>
+    <p>We hope you can join us! Please let us know if you can make it and your dietary requirements by <a href="https://forms.gle/R5ANB2Lf4pr8vQqy5">completing this form</a>.</p>
+    <p>Please reply by <strong>31st January 2027</strong>.</p>
+  </section>
+
+  <section id="venue">
+    <h2>Venue</h2>
+    <p>The West Barn</p>
+    <!-- VENUE ADDRESS -->
+    <address>
+      Pound Lane<br>
+      Bradford-on-Avon<br>
+      Wiltshire<br>
+      BA15 1LF<br>
+    </address>
+    <p><a href="https://maps.app.goo.gl/W7dv37EqR6qETvi19">Location on Google Maps</a></p>
+    <p><a href="https://www.bradfordheritage.co.uk/barns">Bradford-on-Avon Preservation Trust</a></p>
+
+    <img src="https://images.squarespace-cdn.com/content/v1/6061bc86ca27851a0e6fdcab/1617290072145-XGJ3PLLZ2BQW9Z7P9R5K/L1078104.jpeg" alt="The West Barn" width="600" height="400">
+    <!--<h3>Dress code</h3>
+    <p>Smart and comfortable. Some of the day is outdoors, so bring a layer.</p>-->
+    <!--<h3>Accommodation</h3>
+    <p>We’ve reserved rooms at ___, five minutes from the venue. Quote “___” when booking by ___.</p>-->
+  </section>
+
+  <section id="timings">
+    <h2>Timings</h2>
+    <!-- EDIT, ADD OR DELETE <li> LINES -->
+    <ul class="timeline">
+      <li><time>2:00pm</time><span>Guests arrive for welcome reception</span></li>
+      <li><time>3:00pm</time><span>Ceremony</span></li>
+      <li><time>4:00pm</time><span>Wedding reception with dinner, drinks and live music: more details to follow.</span></li>
+    </ul>
+  </section>
+
+  <!--<section id="travel">
+    <h2>Travel</h2>
+    <h3>By train</h3>
+    <p>The nearest station is Oxford, 25 minutes away by taxi. Trains from London Paddington take about an hour.</p>
+    <h3>By car</h3>
+    <p>Free parking is available at the venue. Use postcode OX1 2AB for satnav.</p>
+    <h3>Taxis and shuttle</h3>
+    <p>A shuttle will run between the Old Bell Inn and the venue from 1:00pm and back from 11:30pm. Local taxi: Hartwell Cars, 01234 567890.</p>
+  </section>-->
+
+
+</main>
+
+</body>
+</html>
